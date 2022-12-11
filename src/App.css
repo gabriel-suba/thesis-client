@@ -28,7 +28,7 @@ input::-webkit-inner-spin-button {
 
 /* Firefox */
 input[type=number] {
-	-moz-appearance: textfield;
+	appearance: textfield;
 }
 
 input {
@@ -97,6 +97,12 @@ h3, h4 {
 	border-radius: 0.875rem;
 
 	box-shadow: 0px 15px 39px -15px var(--clr-dark-200);
+}
+
+@media (max-width: 41.875rem) {
+	.main {
+		flex-direction: column;
+	}
 }
 
 .form {
