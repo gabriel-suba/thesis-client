@@ -90,19 +90,16 @@ h3, h4 {
 
 .main {
 	display: flex;
-
+	margin-block: 1.5rem;
 	background-color: var(--clr-dark-200);
 	color: var(--clr-white);
-
 	border-radius: 0.875rem;
-
 	box-shadow: 0px 15px 39px -15px var(--clr-dark-200);
 }
 
 @media (max-width: 41.875rem) {
 	.main {
 		flex-direction: column;
-		margin-block: 1.5rem;
 	}
 }
 
