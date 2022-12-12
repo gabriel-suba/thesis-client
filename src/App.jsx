@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import makePrediction from './model/makePrediction'
 import './App.css'
 
 function App() {
@@ -36,9 +37,7 @@ function App() {
   }
 
   const fetchPredicted = async (area) => {
-    const URL = `https://construction-supply-ai.onrender.com/predict/${area}`
-    const response = await fetch(URL)
-    const result = await response.json()
+    const result = await makePrediction(area)
 
     setOutputs({
       cement: result.cement.toFixed(2),
@@ -65,13 +64,12 @@ function App() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    
+
     fetchPredicted(inputs.area)
   }
 
   return (
     <div className="App">
-      {/* <h1 className="title text-center">Construction Supply Simulator</h1> */}
       <main className="main container">
       <form onSubmit={handleSubmit} className="form flex-1">
           <div className="form__group">
