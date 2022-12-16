@@ -96,7 +96,7 @@ function App() {
           </div>
           <div className="button__wrapper">
             <button type="submit" className="btn submit">Submit</button>
-            <button type="button" className="btn reset">Reset</button>
+            <button onClick={() => setInputs({ area: 0, finish: "1" })} type="button" className="btn reset">Reset</button>
           </div>
       </form>
       <div className="output flex-2">
